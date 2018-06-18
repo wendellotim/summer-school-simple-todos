@@ -1,6 +1,6 @@
 require('./main.css');
 require("./bootstrap/css/bootstrap.min.css");
-let app = document.querySelector('#app');
+//let app = document.querySelector('#app');
 var myNodelist = document.getElementsByTagName("LI");
 var i;
 for (i = 0; i < myNodelist.length; i++) {
