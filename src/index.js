@@ -1,6 +1,41 @@
 require('./main.css');
 require("./bootstrap/css/bootstrap.min.css");
 //let app = document.querySelector('#app');
+var tasks = [
+ 
+  set1 = ['First Option','Second Option','Third Option']
+];
+
+function makeUL(array) {
+// Create the list element:
+var list = document.createElement('ul');
+
+for(var i = 0; i < array.length; i++) {
+  // Create the list item:
+  var item = document.createElement('li');
+
+  // Set its contents:
+  item.appendChild(document.createTextNode(array[i]));
+
+  // Add it to the list:
+  list.appendChild(item);
+}
+
+// Finally, return the constructed list:
+return list;
+}
+
+
+
+
+
+
+
+
+
+
+
+/*
 var myNodelist = document.getElementsByTagName("LI");
 var i;
 for (i = 0; i < myNodelist.length; i++) {
@@ -10,7 +45,6 @@ for (i = 0; i < myNodelist.length; i++) {
   span.appendChild(txt);
   myNodelist[i].appendChild(span);
 }
-
 // Click on a close button to hide the current list item
 var close = document.getElementsByClassName("close");
 var i;
@@ -58,7 +92,7 @@ function newElement() {
 function myFunction(x) {
   x.classList.toggle("change");
 }
-
+*/
  /*
 var button = document.createElement("button");
 button.innerHTML = 'my button'

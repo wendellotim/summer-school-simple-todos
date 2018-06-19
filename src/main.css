@@ -69,7 +69,7 @@ ul li.checked::before {
 .header {
     background-color:blue;
     padding: 30px 40px;
-    color: white;
+    color: black;
     text-align: center;
 }
 
@@ -193,6 +193,7 @@ form.example::after {
   display: table;
 }
 
-.glyphicon glyphicon-plus{
-    color: white;
+.glyphiconglyphicon-plus{
+    color: red;
+    background-color:red;
 }
