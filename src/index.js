@@ -2,17 +2,18 @@ require('./main.css');
 require("./bootstrap/css/bootstrap.min.css");
 //let app = document.querySelector('#app');
 //an arry of objects
-var tasks = [ { task1: '', description: '', time: new Date().getHours().toString() + ":" + getMinutes() }, 
-{ task2: '', description: '', time: new Date().getHours().toString() + ":" + getMinutes() },
-{ task3: '', description: '', time: new Date().getHours().toString() + ":" + getMinutes() },
-{ task4: '', description: '', time: new Date().getHours().toString() + ":" + getMinutes() },
-{ task5: '', description: '', time: new Date().getHours().toString() + ":" + getMinutes() },
-]
+var tasks = [ { task: 'to cook', description: 'kikoko', time: new Date().getHours().toString() + ":" + new Date().getMinutes().toString() }, 
+{ task: '', description: 'to work', time: new Date().getHours().toString() + ":" +new Date().getMinutes().toString() },
+{ task: '', description: '', time: new Date().getHours().toString() + ":" + new Date().getMinutes().toString() },
+{ task: '', description: '', time: new Date().getHours().toString() + ":" + new Date().getMinutes().toString() },
+{ task: '', description: '', time: new Date().getHours().toString() + ":" + new Date().getMinutes().toString() }]
 
-
-
-
-
+for( let i = 0; i<tasks.length; i++)
+  {  var list = document.createElement("li");
+var t = document.createTextNode(tasks[i].task  + " " + tasks[i].description + tasks[i].time);
+list.appendChild(t);
+document.getElementById("myUL").appendChild(list);
+}
 
 
 
