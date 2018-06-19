@@ -1,20 +1,20 @@
 require('./main.css');
 require("./bootstrap/css/bootstrap.min.css");
-//let app = document.querySelector('#app');
+let app = document.querySelector('#app');
 //an arry of objects
-var tasks = [ { task1: '', description: '', time: new Date().getHours().toString() + ":" + getMinutes() }, 
-{ task2: '', description: '', time: new Date().getHours().toString() + ":" + getMinutes() },
-{ task3: '', description: '', time: new Date().getHours().toString() + ":" + getMinutes() },
-{ task4: '', description: '', time: new Date().getHours().toString() + ":" + getMinutes() },
-{ task5: '', description: '', time: new Date().getHours().toString() + ":" + getMinutes() },
+var tasks = [ { task: '', description: '', time: new Date().getHours().toString() + ":" + getMinutes() }, 
+{ task: '', description: '', time: new Date().getHours().toString() + ":" + getMinutes() },
+{ task: '', description: '', time: new Date().getHours().toString() + ":" + getMinutes() },
+{ task: '', description: '', time: new Date().getHours().toString() + ":" + getMinutes() },
+{ task: '', description: '', time: new Date().getHours().toString() + ":" + getMinutes() },
 ]
+for(let i = 0; i<tasks.length; i++){
+var li = document.createElement("li");
+
+var t = document.createTextNode(tasks[i].task);
 
 
-
-
-
-
-
+}
 
 
 
