@@ -1,22 +1,7 @@
 require('./main.css');
 require("./bootstrap/css/bootstrap.min.css");
-let app = document.querySelector('#app');
+//let app = document.querySelector('#app');
 //an arry of objects
-<<<<<<< HEAD
-var tasks = [ { task: '', description: '', time: new Date().getHours().toString() + ":" + getMinutes() }, 
-{ task: '', description: '', time: new Date().getHours().toString() + ":" + getMinutes() },
-{ task: '', description: '', time: new Date().getHours().toString() + ":" + getMinutes() },
-{ task: '', description: '', time: new Date().getHours().toString() + ":" + getMinutes() },
-{ task: '', description: '', time: new Date().getHours().toString() + ":" + getMinutes() },
-]
-for(let i = 0; i<tasks.length; i++){
-var li = document.createElement("li");
-
-var t = document.createTextNode(tasks[i].task);
-
-
-}
-=======
 var tasks = [ { task: 'to cook', description: 'kikoko', time: new Date().getHours().toString() + ":" + new Date().getMinutes().toString() }, 
 { task: '', description: 'to work', time: new Date().getHours().toString() + ":" +new Date().getMinutes().toString() },
 { task: '', description: '', time: new Date().getHours().toString() + ":" + new Date().getMinutes().toString() },
@@ -31,7 +16,6 @@ document.getElementById("myUL").appendChild(list);
 }
 
 
->>>>>>> d9bf09ee81df659380e39a248dc181137e114a06
 
 
 
