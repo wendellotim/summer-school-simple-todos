@@ -1,9 +1,19 @@
 require('./main.css');
 require("./bootstrap/css/bootstrap.min.css");
 //let app = document.querySelector('#app');
+
+var time = function() {
+  return new Date().getHours().toString() + ":" + new Date().getMinutes().toString();
+};
+
 //an arry of objects
-var tasks = [ { task: 'to cook', description: 'kikoko', time: new Date().getHours().toString() + ":" + new Date().getMinutes().toString() }, 
-{ task: '', description: 'to work', time: new Date().getHours().toString() + ":" +new Date().getMinutes().toString() },
+var tasks = [
+  {
+    task: 'to cook',
+    description: 'kikoko',
+    time: time()
+  }, 
+  { task: '', description: 'to work', time: time() },
 { task: '', description: '', time: new Date().getHours().toString() + ":" + new Date().getMinutes().toString() },
 { task: '', description: '', time: new Date().getHours().toString() + ":" + new Date().getMinutes().toString() },
 { task: '', description: '', time: new Date().getHours().toString() + ":" + new Date().getMinutes().toString() }]
@@ -13,6 +23,13 @@ for( let i = 0; i<tasks.length; i++)
 var t = document.createTextNode(tasks[i].task  + " " + tasks[i].description + tasks[i].time);
 list.appendChild(t);
 document.getElementById("myUL").appendChild(list);
+}
+
+var myBtn = document.getElementById("addBtn");
+if (myBtn) {
+  myBtn.addEventListener("click", function() {
+    console.log('Clicked!');
+});
 }
 
 
@@ -44,7 +61,7 @@ for (i = 0; i < close.length; i++) {
 var list = document.querySelector('ul');
 list.addEventListener('click', function(ev) {
   if (ev.target.tagName === 'LI') {
-    ev.target.classList.toggle('checked');
+    ev.target.classList.toggle('checked'); 
   }
 }, false);
 
