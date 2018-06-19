@@ -1,9 +1,4 @@
-<<<<<<< HEAD
-body {
-    background-color: grey
-=======
-
-/* Remove margins and padding from the list */
+/*Remove margins and padding from the list */
 ul {
     margin: 0;
     padding: 0;
@@ -199,5 +194,4 @@ form.example::after {
 
 .glyphicon glyphicon-plus{
     color: white;
->>>>>>> 8fe8c7e802781981bae5866bff16c3d114fb15de
 }

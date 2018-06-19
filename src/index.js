@@ -1,9 +1,4 @@
 require('./main.css');
-<<<<<<< HEAD
-let app = document.querySelector('#app')
-
-app.innerHTML = '<h2></h2>'
-=======
 require("./bootstrap/css/bootstrap.min.css");
 //let app = document.querySelector('#app');
 var myNodelist = document.getElementsByTagName("LI");
@@ -95,4 +90,3 @@ app.appendChild(button);
 
 
 //app.innerHTML = '<h2></h2>'
->>>>>>> 8fe8c7e802781981bae5866bff16c3d114fb15de
