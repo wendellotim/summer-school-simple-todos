@@ -57,7 +57,17 @@ function newElement() {
 }
 function myFunction(x) {
   x.classList.toggle("change");
+
 }
+
+var Tasks = [ {task : "", description: "", time : new Date().getHours().toString() + ":" + getminutes()},
+{task : "", description: "", time : new Date().getHours().toString() + ":" + getminutes()},
+{task : "", description: "", time : new Date().getHours().toString() + ":" + getminutes()},
+{task : "", description: "", time : new Date().getHours().toString() + ":" + getminutes()},
+{task : "", description: "", time : new Date().getHours().toString() + ":" + getminutes()},
+{task : "", description: "", time : new Date().getHours().toString() + ":" + getminutes()},
+{task : "", description: "", time : new Date().getHours().toString() + ":" + getminutes()}]
+
 
  /*
 var button = document.createElement("button");
