@@ -1,29 +1,13 @@
 require('./main.css');
 require("./bootstrap/css/bootstrap.min.css");
 //let app = document.querySelector('#app');
-var tasks = [
- 
-  set1 = ['First Option','Second Option','Third Option']
-];
-
-function makeUL(array) {
-// Create the list element:
-var list = document.createElement('ul');
-
-for(var i = 0; i < array.length; i++) {
-  // Create the list item:
-  var item = document.createElement('li');
-
-  // Set its contents:
-  item.appendChild(document.createTextNode(array[i]));
-
-  // Add it to the list:
-  list.appendChild(item);
-}
-
-// Finally, return the constructed list:
-return list;
-}
+//an arry of objects
+var tasks = [ { task1: '', description: '', time: new Date().getHours().toString() + ":" + getMinutes() }, 
+{ task2: '', description: '', time: new Date().getHours().toString() + ":" + getMinutes() },
+{ task3: '', description: '', time: new Date().getHours().toString() + ":" + getMinutes() },
+{ task4: '', description: '', time: new Date().getHours().toString() + ":" + getMinutes() },
+{ task5: '', description: '', time: new Date().getHours().toString() + ":" + getMinutes() },
+]
 
 
 
