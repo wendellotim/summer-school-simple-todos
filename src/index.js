@@ -36,22 +36,27 @@ var tasks = [
            ]
 
 
-for( let i = 0; i<tasks.length; i++)
+/*for( let i = 0; i<tasks.length; i++)
   {  var list = document.createElement("li");
 var t = document.createTextNode(tasks[i].task  + " " + tasks[i].description + tasks[i].time);
 list.appendChild(t);
 document.getElementById("myUL").appendChild(list);
 }
-
+*/
 var myBtn = document.getElementById("addBtn");
 if (myBtn) {
   myBtn.addEventListener("click", function() {
-    console.log('Clicked!');
+    var list = document.createElement("li")
+   var input = document.getElementById("myInput").value
+   var t = document.createTextNode(input)
+    
+    list.appendChild(t)
+    document.getElementById("myUL").appendChild(list)
 
   });
 }
 
-var myNodelist = document.getElementsByTagName("LI");
+/*var myNodelist = document.getElementsByTagName("LI");
 var i;
 for (i = 0; i < myNodelist.length; i++) {
   var span = document.createElement("SPAN");
@@ -60,7 +65,7 @@ for (i = 0; i < myNodelist.length; i++) {
   span.appendChild(txt);
   myNodelist[i].appendChild(span);
 }
-
+*/
 // Click on a close button to hide the current list item
 var close = document.getElementsByClassName("close");
 var i;
@@ -88,7 +93,7 @@ function addItem(){
   ul.appendChild(li);
   
 }
-
+/*
 document.getElementById("addtask").addEventListener("click", function()
 {
   window.location.href="addtask.html";
@@ -96,7 +101,7 @@ document.getElementById("addtask").addEventListener("click", function()
 )
 
 // Create a new list item when clicking on the "Add" button
-function newElement() {
+/*function newElement() {
   	var ul = document.getElementById("myUL");
   var li = document.createElement("li");
   var inputValue = document.getElementById("myInput").value;
@@ -134,7 +139,7 @@ app.appendChild(button);
 //app.appendChild(table);
 */
 
-
+/*
 
 function addItem(){
   var k = document.createElement("k");
@@ -143,7 +148,7 @@ function addItem(){
   document.body.appendChild(k);
 }
 
-
+*/
 
 
 
