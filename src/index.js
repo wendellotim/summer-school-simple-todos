@@ -32,7 +32,14 @@ var tasks = [
      task: 'to bath',
      description: 'my body',
      time: time()
-  }
+  },
+
+  {
+    task: 'to prepare for',
+    description: 'work',
+    time: time()
+ }
+  
            ]
 
 
@@ -129,28 +136,5 @@ button.innerHTML = 'my button'
 app.appendChild(button);
 //app.appendChild(table);
 */
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 //app.innerHTML = '<h2></h2>'
