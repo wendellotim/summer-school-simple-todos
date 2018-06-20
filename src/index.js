@@ -78,7 +78,7 @@ list.addEventListener('click', function(ev) {
     ev.target.classList.toggle('checked'); 
   }
 }, false);
-/*
+
 function addItem(){
 	var ul = document.getElementById("dynamic-list");
   var candidate = document.getElementById("candidate");
@@ -88,8 +88,12 @@ function addItem(){
   ul.appendChild(li);
   
 }
-*/
 
+document.getElementById("addtask").addEventListener("click", function()
+{
+  window.location.href="addtask.html";
+}
+)
 
 // Create a new list item when clicking on the "Add" button
 function newElement() {
@@ -132,7 +136,12 @@ app.appendChild(button);
 
 
 
-
+function addItem(){
+  var k = document.createElement("k");
+  k.setAttribute("type", "time" );
+  k.setAttribute("value", "23:00:00");
+  document.body.appendChild(k);
+}
 
 
 
