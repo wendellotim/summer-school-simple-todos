@@ -13,10 +13,28 @@ var tasks = [
     description: 'kikoko',
     time: time()
   }, 
-  { task: '', description: 'to work', time: time() },
-{ task: '', description: '', time: new Date().getHours().toString() + ":" + new Date().getMinutes().toString() },
-{ task: '', description: '', time: new Date().getHours().toString() + ":" + new Date().getMinutes().toString() },
-{ task: '', description: '', time: new Date().getHours().toString() + ":" + new Date().getMinutes().toString() }]
+  {
+     task: 'to do',
+     description: 'work',
+     time: time()
+  },
+  { 
+     task: 'to dig',
+     description: 'compound',
+     time: time()
+  },
+  {
+     task: 'to winow',
+     description: 'beans',
+     time: time()
+  },
+  {
+     task: 'to bath',
+     description: 'my body',
+     time: time()
+  }
+           ]
+
 
 for( let i = 0; i<tasks.length; i++)
   {  var list = document.createElement("li");
@@ -29,15 +47,10 @@ var myBtn = document.getElementById("addBtn");
 if (myBtn) {
   myBtn.addEventListener("click", function() {
     console.log('Clicked!');
-});
+
+  });
 }
 
-
-
-
-
-
-/*
 var myNodelist = document.getElementsByTagName("LI");
 var i;
 for (i = 0; i < myNodelist.length; i++) {
@@ -47,6 +60,7 @@ for (i = 0; i < myNodelist.length; i++) {
   span.appendChild(txt);
   myNodelist[i].appendChild(span);
 }
+
 // Click on a close button to hide the current list item
 var close = document.getElementsByClassName("close");
 var i;
@@ -64,9 +78,22 @@ list.addEventListener('click', function(ev) {
     ev.target.classList.toggle('checked'); 
   }
 }, false);
+/*
+function addItem(){
+	var ul = document.getElementById("dynamic-list");
+  var candidate = document.getElementById("candidate");
+  var li = document.createElement("li");
+  li.setAttribute('id',candidate.value);
+  li.appendChild(document.createTextNode(candidate.value));
+  ul.appendChild(li);
+  
+}
+*/
+
 
 // Create a new list item when clicking on the "Add" button
 function newElement() {
+  	var ul = document.getElementById("myUL");
   var li = document.createElement("li");
   var inputValue = document.getElementById("myInput").value;
   var t = document.createTextNode(inputValue);
@@ -94,6 +121,7 @@ function newElement() {
 function myFunction(x) {
   x.classList.toggle("change");
 }
+/*
 */
  /*
 var button = document.createElement("button");
