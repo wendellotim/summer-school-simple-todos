@@ -1,7 +1,7 @@
 require('./main.css');
 require('./bootstrap/css/bootstrap.min.css');
 
-const UL = document.getElementById('myUL');
+const ourList = document.getElementById('myUL');
 
 const tasks = [];
 // retrieving data from html form to array
@@ -20,27 +20,31 @@ function getData(event) {
   };
   tasks.push(object);
 
+  const unorderedList = document.createElement('ul');
+  let listItem = document.createElement('li');
+  let t = document.createTextNode(tasks[tasks.length - 1].Task);
+  listItem.appendChild(t);
+  unorderedList.appendChild(listItem);
+  ourList.appendChild(unorderedList);
 
-  let list = document.createElement('li');
-  let t = document.createTextNode(tasks[0].Task);
-  list.appendChild(t);
-  UL.appendChild(list);
 
-  list = document.createElement('li');
-  t = document.createTextNode(tasks[0].time);
-  list.appendChild(t);
-  UL.appendChild(list);
+  listItem = document.createElement('li');
+  t = document.createTextNode(tasks[tasks.length - 1].Descrit);
+  listItem.appendChild(t);
+  unorderedList.appendChild(listItem);
+  ourList.appendChild(unorderedList);
 
-  list = document.createElement('li');
-  t = document.createTextNode(tasks[0].Descrit);
-  list.appendChild(t);
-  UL.appendChild(list);
+
+  listItem = document.createElement('li');
+  t = document.createTextNode(tasks[tasks.length - 1].time);
+  listItem.appendChild(t);
+  unorderedList.appendChild(listItem);
+  ourList.appendChild(unorderedList);
 }
 const databutton = document.getElementById('box');
 if (databutton) {
   databutton.addEventListener('click', getData);
 }
-
 
 // Add a "checked" symbol when clicking on a list item
 const list = document.querySelector('ul');
