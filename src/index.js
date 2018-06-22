@@ -4,7 +4,7 @@ require('./bootstrap/css/bootstrap.min.css');
 const UL = document.getElementById('myUL');
 
 const tasks = [];
-// retrieving data from html to array
+// retrieving data from html form to array
 
 function getData(event) {
   event.preventDefault();
