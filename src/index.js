@@ -1,12 +1,22 @@
 require('./main.css');
 require('./bootstrap/css/bootstrap.min.css');
 
-const ourList = document.getElementById('myUL');
+class MyApp{
+  constructor(){
+    //our array of objects
+    this.tasks = [];
 
-const tasks = [];
+    this.ourList = document.getElementById('myUL');
+    
+    const subBtton = document.getElementById('box');
+    if (subBtton) {
+      subBtton.addEventListener('click', (event) =>{this.getData(event); });
+    }
+  } 
+
 // retrieving data from html form to array
 
-function getData(event) {
+ getData(event) {
   event.preventDefault();
   const TaskName = document.getElementById('tas').value;
   const Time = document.getElementById('tt').value;
@@ -18,38 +28,29 @@ function getData(event) {
     time: Time,
     Descrit: Description,
   };
-  tasks.push(object);
+  this.tasks.push(object);
 
   const unorderedList = document.createElement('ul');
   let listItem = document.createElement('li');
-  let t = document.createTextNode(tasks[tasks.length - 1].Task);
+  let t = document.createTextNode(this.tasks[this.tasks.length - 1].Task);
   listItem.appendChild(t);
   unorderedList.appendChild(listItem);
-  ourList.appendChild(unorderedList);
+  this.ourList.appendChild(unorderedList);
 
 
   listItem = document.createElement('li');
-  t = document.createTextNode(tasks[tasks.length - 1].Descrit);
+  t = document.createTextNode(this.tasks[this.tasks.length - 1].Descrit);
   listItem.appendChild(t);
   unorderedList.appendChild(listItem);
-  ourList.appendChild(unorderedList);
+  this.ourList.appendChild(unorderedList);
 
 
   listItem = document.createElement('li');
-  t = document.createTextNode(tasks[tasks.length - 1].time);
+  t = document.createTextNode(this.tasks[this.tasks.length - 1].time);
   listItem.appendChild(t);
   unorderedList.appendChild(listItem);
-  ourList.appendChild(unorderedList);
+  this.ourList.appendChild(unorderedList);
 }
-const databutton = document.getElementById('box');
-if (databutton) {
-  databutton.addEventListener('click', getData);
 }
 
-// Add a "checked" symbol when clicking on a list item
-const list = document.querySelector('ul');
-list.addEventListener('click', (ev) => {
-  if (ev.target.tagName === 'LI') {
-    ev.target.classList.toggle('checked');
-  }
-}, false);
+const app = new MyApp();
