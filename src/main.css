@@ -127,6 +127,14 @@ input {
 
 }
 
+#st{
+    background-color:#D0CAF9;
+    border-radius: 5px;
+    width: 50%;
+    float: left;
+
+}
+
 #tt{
     background-color:#D0CAF9;
     border-radius: 5px;
