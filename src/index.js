@@ -15,33 +15,33 @@ class MyApp {
     // retrieving data from html form to array
     getData(event) {
         event.preventDefault();
-        const TaskName = document.getElementById('tas').value;
-        const Time = document.getElementById('tt').value;
-        const Description = document.getElementById('des').value;
+        const task = document.getElementById('tas').value;
+        const time = document.getElementById('tt').value;
+        const description = document.getElementById('des').value;
         // create object
         const object = {
-            Task: TaskName,
-            time: Time,
-            Descrit: Description,
+            task,
+            time,
+            description,
         };
         this.tasks.push(object);
         const unorderedList = document.createElement('ul');
         let listItem = document.createElement('li');
-        let t = document.createTextNode(this.tasks[this.tasks.length - 1].Task);
-        listItem.appendChild(t);
+        let textNode = document.createTextNode(this.tasks[this.tasks.length - 1].task);
+        listItem.appendChild(textNode);
         unorderedList.appendChild(listItem);
         this.ourList.appendChild(unorderedList);
         listItem = document.createElement('li');
-        t = document.createTextNode(this.tasks[this.tasks.length - 1].Descrit);
-        listItem.appendChild(t);
+        textNode = document.createTextNode(this.tasks[this.tasks.length - 1].description);
+        listItem.appendChild(textNode);
         unorderedList.appendChild(listItem);
         this.ourList.appendChild(unorderedList);
         listItem = document.createElement('li');
-        t = document.createTextNode(this.tasks[this.tasks.length - 1].time);
-        listItem.appendChild(t);
+        textNode = document.createTextNode(this.tasks[this.tasks.length - 1].time);
+        listItem.appendChild(textNode);
         unorderedList.appendChild(listItem);
         this.ourList.appendChild(unorderedList);
     }
 }
-const app = new MyApp();
+new MyApp();
 //# sourceMappingURL=index.js.map

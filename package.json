@@ -6,10 +6,11 @@
   "scripts": {
     "build": "nwb build-web-app",
     "clean": "nwb clean-app",
-    "start": "nwb serve-web-app --reload",
+    "start": "nwb serve-web-app --reload && tsc && npm run lint",
     "test": "nwb test",
     "test:coverage": "nwb test --coverage",
-    "test:watch": "nwb test --server"
+    "test:watch": "nwb test --server",
+    "lint": "tslint -c tslint.json '**/.ts' '**/.tsx' --exclude '**/node_modules/**'"
   },
   "dependencies": {},
   "devDependencies": {
