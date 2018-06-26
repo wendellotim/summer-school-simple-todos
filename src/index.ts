@@ -38,39 +38,47 @@ class MyApp {
       const task = task1.value;
       const time = newTime.value;
       const description = newDescription.value;
+      if (task === "" || time === "" || description === "" || task === " " || time === " " || description === " ") {
+          alert("fill all the fields");
+      } else {
+
+         task1.value = "";
+         newDescription.value = "";
+         newTime.value = "";
   // create object
-      const object = {
+         const object = {
     task,
     time,
     description
   };
-      this.tasks.push(object);
-  }
+         this.tasks.push(object);
 
-  const unorderedList = document.createElement("ul");
-  let listItem = document.createElement("li");
-  let textNode = document.createTextNode(this.tasks[this.tasks.length - 1].task);
-  listItem.appendChild(textNode);
-  unorderedList.appendChild(listItem);
-  if (this.ourList) {
+         const unorderedList = document.createElement("ul");
+         let listItem = document.createElement("li");
+         let textNode = document.createTextNode(this.tasks[this.tasks.length - 1].task);
+         listItem.appendChild(textNode);
+         unorderedList.appendChild(listItem);
+         if (this.ourList) {
   this.ourList.appendChild(unorderedList);
   }
-  listItem = document.createElement("li");
-  textNode = document.createTextNode(this.tasks[this.tasks.length - 1].description);
-  listItem.appendChild(textNode);
-  unorderedList.appendChild(listItem);
-  if (this.ourList) {
+         listItem = document.createElement("li");
+         textNode = document.createTextNode(this.tasks[this.tasks.length - 1].description);
+         listItem.appendChild(textNode);
+         unorderedList.appendChild(listItem);
+         if (this.ourList) {
   this.ourList.appendChild(unorderedList);
   }
 
-  listItem = document.createElement("li");
-  textNode = document.createTextNode(this.tasks[this.tasks.length - 1].time);
-  listItem.appendChild(textNode);
-  unorderedList.appendChild(listItem);
-  if (this.ourList) {
+         listItem = document.createElement("li");
+         textNode = document.createTextNode(this.tasks[this.tasks.length - 1].time);
+         listItem.appendChild(textNode);
+         unorderedList.appendChild(listItem);
+         if (this.ourList) {
   this.ourList.appendChild(unorderedList);
   }
  }
+ }
+}
 }
 
 // tslint:disable-next-line:no-unused-expression
