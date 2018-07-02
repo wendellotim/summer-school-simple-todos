@@ -1,14 +1,16 @@
 <!DOCTYPE html>
 <html>
-  <head>
+
+<head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <title>Summer School Simple Todos</title>
     <meta name="description" content="">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  </head>
-  <body>
+</head>
+
+<body>
     </br>
     <hr></hr>
 
@@ -18,36 +20,49 @@
         <input type="text" id="myInput" placeholder="Title...">
         <span id="add" class="addBtn">Add</span>
         -->
-       </br>
+        </br>
 
-    <!-- The form -->
+        <!-- The form -->
 
+    </div>
+    <div id="myButtons" class="heads">
+        <button class="btn"><i class="fa fa-home"></i> Home</button>
+        <button id="menu" class="btn"><i class="fa fa-bars"></i> Menu</button>
+    </div>
+    </div>
+
+    <center>
+
+        <div id="myUL">
         </div>
-      <div id="myButtons" class="heads">
-          <button class="btn"><i class="fa fa-home"></i> Home</button>
-          <button class="btn"><i class="fa fa-bars"></i> Menu</button>
-         </div>
-     </div>
+        <p>
+            <h3>New task </h3>
+        </p>
 
-<center>
-
- <div id="myUL">
-     </div>
-     <p><h3>New task </h3></p>
-
-     <center>
-          <form class="myForm">
-           <input id="tas" type=text placeholder="Task" required/></br></br></br>
-          <input id="des" type=text placeholder="Description" required/></br></br></br>
-          <input id="tt" type="time" placeholder="Time"required/></br></br></br>
-          </center>
-
-              <center>
+        <center>
+            <form class="myForm">
+                <input id="tas" type=text placeholder="Task" required/></br>
+                </br>
+                </br>
+                <input id="des" type=text placeholder="Description" required/></br>
+                </br>
+                </br>
+                <input id="tt" type="time" placeholder="Time" required/></br>
+                </br>
+                </br>
+        </center>
+        <!--<div>
+            <button id="edit">edit</edit></button>
+        </div>
+    -->
+        <center>
             <button id="box" class="sub">Submit</button>
-              </center>
-            </center>
-        </form>
+            <span class="getError"></span>
+        </center>
+    </center>
+    </form>
     </center>
 
-  </body>
+</body>
+
 </html>

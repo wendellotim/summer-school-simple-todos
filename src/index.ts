@@ -4,7 +4,7 @@ import { Task, getData } from "./utilitises";
 
 class MyApp {
     ourList: HTMLElement | null;
-
+    E = document.querySelector("getError");
     tasks: Task [];
     constructor() {
     // our array of objects
@@ -15,12 +15,11 @@ class MyApp {
     if (subBtton) {
       subBtton.addEventListener("click", this.eventListener);
     }
+
   }
     eventListener = (event: Event) => {
     getData(event);
 }
-
-// retrieving data from html form to array
 
 }
 

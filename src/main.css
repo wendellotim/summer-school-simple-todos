@@ -7,19 +7,21 @@ ul {
 
 /* Style the list items */
 ul li {
-    cursor: pointer;
+
     position: relative;
     padding: 0px 10px 20px 10px;
-    background: #eee;
+   /* background:#D0CAF9;*/
     font-size: 18px;
+    color: blue;
+
     transition: 0.2s;
     display: inline;
 
-    /* make the list items unselectable */
+    /* make the list items unselectable
     -webkit-user-select: none;
     -moz-user-select: none;
     -ms-user-select: none;
-    user-select: none;
+    user-select: none;*/
 }
 
 */
@@ -28,7 +30,7 @@ ul li {
 ul li.checked::before {
     content: '';
     position: absolute;
-   /* border-color: #fff;*/
+    border-color: #fff;
     border-style: solid;
     border-width: 0 2px 2px 0;
     top: 10px;
@@ -62,6 +64,7 @@ ul li.checked::before {
 
 /* Style the input */
 input {
+    background-color: #4C9595;
     margin: 0;
     border: none;
     border-radius: 0;
@@ -75,7 +78,7 @@ input {
 .btn {
     background-color: DodgerBlue; /* Blue background */
     border: none; /* Remove borders */
-    color: white; /* White text */
+   /* color: white; /* White text */
     padding: 20px 16px; /* Some padding */
     font-size: 16px; /* Set a font size */
     cursor: pointer; /* Mouse pointer on hover */
