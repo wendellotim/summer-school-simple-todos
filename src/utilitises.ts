@@ -73,6 +73,19 @@ export function getData(event: Event) {
                 }
             });*/
 
+            listItem = document.createElement("li");
+            const dropButton = document.createElement("select");
+            dropButton.options[dropButton.options.length] = new Option("Active");
+            dropButton.options[dropButton.options.length] = new Option("Pending");
+            dropButton.options[dropButton.options.length] = new Option("Complete");
+            textNode = document.createTextNode("status");
+            dropButton.appendChild(textNode);
+            listItem.appendChild(dropButton);
+            unorderedList.appendChild(listItem);
+            if (ourList) {
+                 ourList.appendChild(unorderedList);
+                 }
+
             const deleteButton = document.createElement("button");
             textNode = document.createTextNode("delete");
             deleteButton.appendChild(textNode);
